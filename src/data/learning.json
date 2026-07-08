@@ -1,0 +1,49 @@
+[
+  {
+    "id": "lm-1",
+    "title": "Introduction to NGO Governance",
+    "category": "Governance",
+    "duration": "45 mins",
+    "level": "Beginner",
+    "description": "Learn the foundational principles of good governance, the role of the Board, and how to separate management from oversight.",
+    "objectives": [
+      "Understand the difference between governance and management.",
+      "Identify the key responsibilities of a Board of Directors.",
+      "Learn how to run effective board meetings."
+    ],
+    "lessons": [
+      {
+        "id": "l1",
+        "title": "What is Governance?",
+        "content": "Governance is the system by which an organisation is controlled and operates, and the mechanisms by which it, and its people, are held to account. Ethics, risk management, compliance and administration are all elements of governance."
+      },
+      {
+        "id": "l2",
+        "title": "The Role of the Board",
+        "content": "The board of directors is the governing body of a nonprofit. Individuals who sit on the board are responsible for overseeing the organisation's activities. Board members meet periodically to discuss and vote on the affairs of the organisation."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Which of the following is a primary responsibility of the Board?",
+        "options": ["Day-to-day management", "Strategic oversight", "Executing project activities", "Updating social media"],
+        "answer": 1
+      }
+    ]
+  },
+  {
+    "id": "lm-2",
+    "title": "Financial Management for Nonprofits",
+    "category": "Finance",
+    "duration": "1 hour 30 mins",
+    "level": "Intermediate",
+    "description": "Master the basics of budgeting, cash flow forecasting, and preparing for external audits.",
+    "objectives": [
+      "Understand basic accounting principles.",
+      "Learn how to create a project budget.",
+      "Prepare for an organisational audit."
+    ],
+    "lessons": [],
+    "quiz": []
+  }
+]

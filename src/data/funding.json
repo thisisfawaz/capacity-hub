@@ -1,0 +1,82 @@
+[
+  {
+    "id": "fund-gates",
+    "title": "Bill & Melinda Gates Foundation Grants",
+    "category": "Global Health & Development",
+    "country": "Global",
+    "sector": "Healthcare",
+    "amount": "$100,000 - $10,000,000",
+    "deadline": "Rolling",
+    "description": "Funding for innovative solutions in global health, infectious disease prevention, maternal health, and agricultural development to reduce poverty and inequality.",
+    "eligibility": [
+      "Registered NGOs and non-profit institutions globally",
+      "Focus on low- and middle-income country populations",
+      "Strong alignment with foundation strategic priority areas"
+    ],
+    "tips": "Emphasize scalable technological or scientific innovations that dramatically lower delivery costs in resource-poor settings."
+  },
+  {
+    "id": "fund-usaid",
+    "title": "USAID - Development Innovation Ventures (DIV)",
+    "category": "Innovation & Scaling",
+    "country": "Global",
+    "sector": "Multiple",
+    "amount": "$50,000 - $5,000,000",
+    "deadline": "Year-round / Rolling",
+    "description": "USAID's DIV model funds startup solutions to global development challenges that show proof of concept, scale, and high cost-effectiveness.",
+    "eligibility": [
+      "Any entity registered anywhere, including local NGOs",
+      "Solutions must address extreme poverty in developing nations",
+      "Rigorous commitment to quantitative impact evaluation"
+    ],
+    "tips": "Detail your plan to scale beyond donor funding, showing how the solution eventually integrates into public or private markets."
+  },
+  {
+    "id": "fund-ford",
+    "title": "Ford Foundation - Social Justice Grants",
+    "category": "Human Rights & Equity",
+    "country": "Global",
+    "sector": "Social Justice & Education",
+    "amount": "$50,000 - $1,500,000",
+    "deadline": "By Invitation / Inquiry",
+    "description": "Core and project-based funding for organizations working to reduce inequality, promote democratic values, and protect civil rights globally.",
+    "eligibility": [
+      "Non-governmental organizations (NGOs)",
+      "Demonstrated alignment with gender, racial, and economic justice",
+      "History of community-led local advocacy"
+    ],
+    "tips": "Highlight how your governance structure actively includes the voices of the marginalized populations you serve."
+  },
+  {
+    "id": "fund-rockefeller",
+    "title": "The Rockefeller Foundation - Climate & Resilience",
+    "category": "Climate Action & Health",
+    "country": "Global",
+    "sector": "Climate Action",
+    "amount": "$100,000 - $2,000,000",
+    "deadline": "Varies by Initiative",
+    "description": "Supporting organizations building resilient food, health, and energy systems that mitigate climate change impacts on vulnerable communities.",
+    "eligibility": [
+      "Registered non-profits and academic institutes",
+      "Focus on intersections of climate, green energy transition, and public health",
+      "Multi-stakeholder partnership projects preferred"
+    ],
+    "tips": "Show clear metrics connecting green energy transition or resilient farming to direct public health benefits."
+  },
+  {
+    "id": "fund-usadf",
+    "title": "USADF - Sub-Saharan Africa Community Grants",
+    "category": "Community Enterprise",
+    "country": "Africa Region",
+    "sector": "Agriculture & Energy",
+    "amount": "$10,000 - $250,000",
+    "deadline": "September 30, 2026",
+    "description": "Direct development grants to African-owned and African-led enterprises, cooperatives, and community organizations to build local livelihoods.",
+    "eligibility": [
+      "100% African-owned and managed organizations",
+      "Operating in USADF priority countries in Sub-Saharan Africa",
+      "Direct cooperative membership or community ownership model"
+    ],
+    "tips": "Focus heavily on economic viability, showing how agricultural yields or energy access will generate local jobs and income."
+  }
+]

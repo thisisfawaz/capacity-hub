@@ -1,66 +1,110 @@
-import Image from "next/image";
+import Layout from "@/components/Layout";
+import { Card } from "@/components/Card";
 import styles from "./page.module.css";
+import { FiTrendingUp, FiCheckCircle, FiUsers, FiAward } from "react-icons/fi";
 
-export default function Home() {
+export default function Dashboard() {
+  const stats = [
+    { label: "Overall Capacity Score", value: "72%", icon: <FiTrendingUp size={24} color="var(--primary-color)" /> },
+    { label: "Assessments Completed", value: "4", icon: <FiCheckCircle size={24} color="var(--success-color)" /> },
+    { label: "Learning Modules", value: "12", icon: <FiAward size={24} color="var(--warning-color)" /> },
+    { label: "Team Members", value: "8", icon: <FiUsers size={24} color="var(--text-secondary)" /> },
+  ];
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <Layout>
+      <div className={styles.pageHeader}>
+        <div>
+          <h1 className={styles.pageTitle}>Welcome back, Global Health NGO</h1>
+          <p className={styles.pageSubtitle}>Here's a summary of your organisation's capacity development progress.</p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </div>
+
+      <div className={styles.statsGrid}>
+        {stats.map((stat, i) => (
+          <div key={i} className={styles.statCard}>
+            <div className={styles.statIcon}>{stat.icon}</div>
+            <div className={styles.statInfo}>
+              <div className={styles.statValue}>{stat.value}</div>
+              <div className={styles.statLabel}>{stat.label}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h2 className={styles.sectionTitle}>Recommended Actions</h2>
+      <div className={styles.grid}>
+        <Card 
+          title="Organisational Capacity Assessment" 
+          badge="High Priority" 
+          actionText="Start Assessment" 
+          actionLink="/assessments"
+        >
+          <p>It's time for your annual baseline assessment. Evaluate your core competencies across governance, finance, and programs.</p>
+        </Card>
+
+        <Card 
+          title="Introduction to NGO Governance" 
+          badge="Learning" 
+          badgeType="success"
+          actionText="Continue Module" 
+          actionLink="/learning"
+        >
+          <p>You have completed 45% of this module. Continue learning about board responsibilities and strategic oversight.</p>
+        </Card>
+        
+        <Card 
+          title="Strategic Planning Canvas" 
+          badge="Tool" 
+          actionText="Use Tool" 
+          actionLink="/planning"
+          outlineAction={true}
+        >
+          <p>Prepare for your upcoming strategy session with this collaborative one-page canvas.</p>
+        </Card>
+      </div>
+
+      <div className={styles.twoCol}>
+        <div>
+          <h2 className={styles.sectionTitle}>Recent Templates</h2>
+          <div className={styles.listGroup}>
+            <div className={styles.listItem}>
+              <div className={styles.itemIcon}>📄</div>
+              <div>
+                <strong>Project Budget Template</strong>
+                <p>Financial Management</p>
+              </div>
+            </div>
+            <div className={styles.listItem}>
+              <div className={styles.itemIcon}>🛡️</div>
+              <div>
+                <strong>Safeguarding Policy</strong>
+                <p>Human Resources</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+        
+        <div>
+          <h2 className={styles.sectionTitle}>Funding Highlights</h2>
+          <div className={styles.listGroup}>
+            <div className={styles.listItem}>
+              <div className={styles.itemIcon}>🌍</div>
+              <div>
+                <strong>Global Innovation Fund</strong>
+                <p>$50K - $15M • Rolling Deadline</p>
+              </div>
+            </div>
+            <div className={styles.listItem}>
+              <div className={styles.itemIcon}>💡</div>
+              <div>
+                <strong>Africa Development Grants</strong>
+                <p>Up to $100K • Oct 2026</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
   );
 }

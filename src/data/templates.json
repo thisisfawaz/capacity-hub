@@ -1,0 +1,30 @@
+[
+  {
+    "id": "temp-1",
+    "title": "Project Budget Template",
+    "category": "Financial Management",
+    "format": "Excel",
+    "description": "A comprehensive Excel template for tracking project income and expenses, including variance analysis formulas."
+  },
+  {
+    "id": "temp-2",
+    "title": "Safeguarding Policy Framework",
+    "category": "Safeguarding",
+    "format": "Word",
+    "description": "A foundational policy document outline that you can adapt to protect vulnerable populations in your programs."
+  },
+  {
+    "id": "temp-3",
+    "title": "Theory of Change Canvas",
+    "category": "Strategic Planning",
+    "format": "PDF",
+    "description": "A printable one-page canvas to workshop your organisation's Theory of Change with stakeholders."
+  },
+  {
+    "id": "temp-4",
+    "title": "Employee Code of Conduct",
+    "category": "Human Resources",
+    "format": "Word",
+    "description": "Standard clauses and agreements covering ethics, conflict of interest, and professional behavior."
+  }
+]

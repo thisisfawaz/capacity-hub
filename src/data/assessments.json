@@ -1,0 +1,78 @@
+[
+  {
+    "id": "oca-1",
+    "title": "Organisational Capacity Assessment",
+    "category": "General",
+    "description": "Evaluate your NGO's core competencies, from governance to financial management, to identify strengths and areas for growth.",
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Does your organisation have a formally registered Board of Directors that meets regularly?",
+        "options": [
+          { "text": "Yes, we have a fully functional and engaged Board.", "score": 3 },
+          { "text": "Yes, but they rarely meet or engage in strategic oversight.", "score": 2 },
+          { "text": "We are in the process of forming a Board.", "score": 1 },
+          { "text": "No, we do not have a Board.", "score": 0 }
+        ]
+      },
+      {
+        "id": "q2",
+        "text": "How would you describe your financial management systems?",
+        "options": [
+          { "text": "We use professional accounting software and have annual external audits.", "score": 3 },
+          { "text": "We use basic spreadsheets and reconcile accounts monthly.", "score": 2 },
+          { "text": "We track expenses informally and have no external audits.", "score": 1 },
+          { "text": "We do not have a formal financial management system.", "score": 0 }
+        ]
+      },
+      {
+        "id": "q3",
+        "text": "Does your organisation have a clear, documented strategic plan?",
+        "options": [
+          { "text": "Yes, an updated multi-year plan guides our daily operations.", "score": 3 },
+          { "text": "We have an older strategic plan that is somewhat used.", "score": 2 },
+          { "text": "We have short-term plans but no long-term strategy.", "score": 1 },
+          { "text": "No documented strategic plan exists.", "score": 0 }
+        ]
+      },
+      {
+        "id": "q4",
+        "text": "How effectively do you measure the impact of your projects?",
+        "options": [
+          { "text": "We have a dedicated M&E framework with clear indicators for all projects.", "score": 3 },
+          { "text": "We measure impact occasionally, mostly when donors require it.", "score": 2 },
+          { "text": "We collect basic output data (e.g., number of attendees) but not impact.", "score": 1 },
+          { "text": "We do not systematically measure impact.", "score": 0 }
+        ]
+      },
+      {
+        "id": "q5",
+        "text": "Do you have formal HR policies including Safeguarding and Code of Conduct?",
+        "options": [
+          { "text": "Yes, all staff are trained and sign these policies annually.", "score": 3 },
+          { "text": "We have the documents, but they are rarely reviewed or enforced.", "score": 2 },
+          { "text": "We have basic guidelines but no formal policies.", "score": 1 },
+          { "text": "No HR or safeguarding policies in place.", "score": 0 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pra-1",
+    "title": "Proposal Readiness Assessment",
+    "category": "Fundraising",
+    "description": "Determine if your organisation is ready to apply for major institutional funding.",
+    "questions": [
+      {
+        "id": "p1",
+        "text": "Do you have at least 3 years of audited financial statements?",
+        "options": [
+          { "text": "Yes, unconditionally clean audits.", "score": 3 },
+          { "text": "Yes, but with some management letter findings.", "score": 2 },
+          { "text": "We have 1-2 years of audits.", "score": 1 },
+          { "text": "No external audits conducted yet.", "score": 0 }
+        ]
+      }
+    ]
+  }
+]
