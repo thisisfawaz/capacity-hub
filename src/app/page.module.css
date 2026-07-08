@@ -112,3 +112,174 @@
   font-size: 0.875rem;
   margin: 0;
 }
+
+/* In your page.module.css */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+/* In your page.module.css */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+/* Animated dots for loading */
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.dot {
+  display: inline-block;
+  font-size: 2rem;
+  animation: dotPulse 1.5s ease-in-out infinite;
+  color: var(--primary-color);
+}
+
+/* Optional: Add a subtle bounce to the magnifier */
+@keyframes searchBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1.2); }
+}
+
+.dot {
+  display: inline-block;
+  font-size: 2rem;
+  animation: dotPulse 1.5s ease-in-out infinite;
+  color: var(--primary-color);
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+/* Add to your existing page.module.css */
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .pageHeader {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem !important;
+  }
+
+  .pageSubtitle {
+    font-size: 0.9rem !important;
+  }
+
+  /* Dashboard Stats */
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Dashboard Main Content */
+  .mainContent {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Recent Resources */
+  .recentResource {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  .recentResource button {
+    align-self: flex-start !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 1.25rem !important;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem !important;
+  }
+
+  .statCard {
+    padding: 1rem !important;
+  }
+
+  .statValue {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* Responsive card grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

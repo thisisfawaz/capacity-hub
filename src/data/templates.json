@@ -1,30 +1,50 @@
 [
   {
-    "id": "temp-1",
+    "id": "grant-proposal-template",
+    "title": "Grant Proposal Template",
+    "category": "Proposal Writing",
+    "format": "CSV",
+    "fileSize": "15 KB",
+    "description": "A comprehensive template for writing winning grant proposals. Includes sections for executive summary, problem statement, project description, budget, and M&E plan."
+  },
+  {
+    "id": "project-budget-template",
     "title": "Project Budget Template",
     "category": "Financial Management",
-    "format": "Excel",
-    "description": "A comprehensive Excel template for tracking project income and expenses, including variance analysis formulas."
+    "format": "CSV",
+    "fileSize": "12 KB",
+    "description": "Detailed budget template with formulas for personnel, activities, materials, travel, and overhead costs. Includes budget narrative and justification sections."
   },
   {
-    "id": "temp-2",
-    "title": "Safeguarding Policy Framework",
-    "category": "Safeguarding",
-    "format": "Word",
-    "description": "A foundational policy document outline that you can adapt to protect vulnerable populations in your programs."
+    "id": "concept-note-template",
+    "title": "Concept Note Template",
+    "category": "Proposal Writing",
+    "format": "CSV",
+    "fileSize": "10 KB",
+    "description": "A concise 2-3 page concept note template for initial expressions of interest. Covers problem statement, proposed solution, target beneficiaries, and estimated budget."
   },
   {
-    "id": "temp-3",
-    "title": "Theory of Change Canvas",
-    "category": "Strategic Planning",
-    "format": "PDF",
-    "description": "A printable one-page canvas to workshop your organisation's Theory of Change with stakeholders."
+    "id": "me-framework-template",
+    "title": "M&E Framework Template",
+    "category": "M&E",
+    "format": "CSV",
+    "fileSize": "14 KB",
+    "description": "Comprehensive monitoring and evaluation framework with indicators, data collection methods, frequency, and responsible parties. Includes results framework and logical framework."
   },
   {
-    "id": "temp-4",
-    "title": "Employee Code of Conduct",
-    "category": "Human Resources",
-    "format": "Word",
-    "description": "Standard clauses and agreements covering ethics, conflict of interest, and professional behavior."
+    "id": "project-plan-template",
+    "title": "Project Plan Template",
+    "category": "Project Management",
+    "format": "CSV",
+    "fileSize": "12 KB",
+    "description": "Complete project planning template with Gantt chart, activity timeline, resource allocation, risk matrix, and progress tracking dashboard."
+  },
+  {
+    "id": "funding-assessment-checklist",
+    "title": "Funding Assessment Checklist",
+    "category": "Assessment",
+    "format": "CSV",
+    "fileSize": "10 KB",
+    "description": "A comprehensive checklist to assess organizational readiness, funding source suitability, and partnership evaluation. Includes scoring system and recommendations."
   }
 ]

@@ -1,78 +1,264 @@
-[
-  {
-    "id": "oca-1",
-    "title": "Organisational Capacity Assessment",
-    "category": "General",
-    "description": "Evaluate your NGO's core competencies, from governance to financial management, to identify strengths and areas for growth.",
-    "questions": [
-      {
-        "id": "q1",
-        "text": "Does your organisation have a formally registered Board of Directors that meets regularly?",
-        "options": [
-          { "text": "Yes, we have a fully functional and engaged Board.", "score": 3 },
-          { "text": "Yes, but they rarely meet or engage in strategic oversight.", "score": 2 },
-          { "text": "We are in the process of forming a Board.", "score": 1 },
-          { "text": "No, we do not have a Board.", "score": 0 }
-        ]
-      },
-      {
-        "id": "q2",
-        "text": "How would you describe your financial management systems?",
-        "options": [
-          { "text": "We use professional accounting software and have annual external audits.", "score": 3 },
-          { "text": "We use basic spreadsheets and reconcile accounts monthly.", "score": 2 },
-          { "text": "We track expenses informally and have no external audits.", "score": 1 },
-          { "text": "We do not have a formal financial management system.", "score": 0 }
-        ]
-      },
-      {
-        "id": "q3",
-        "text": "Does your organisation have a clear, documented strategic plan?",
-        "options": [
-          { "text": "Yes, an updated multi-year plan guides our daily operations.", "score": 3 },
-          { "text": "We have an older strategic plan that is somewhat used.", "score": 2 },
-          { "text": "We have short-term plans but no long-term strategy.", "score": 1 },
-          { "text": "No documented strategic plan exists.", "score": 0 }
-        ]
-      },
-      {
-        "id": "q4",
-        "text": "How effectively do you measure the impact of your projects?",
-        "options": [
-          { "text": "We have a dedicated M&E framework with clear indicators for all projects.", "score": 3 },
-          { "text": "We measure impact occasionally, mostly when donors require it.", "score": 2 },
-          { "text": "We collect basic output data (e.g., number of attendees) but not impact.", "score": 1 },
-          { "text": "We do not systematically measure impact.", "score": 0 }
-        ]
-      },
-      {
-        "id": "q5",
-        "text": "Do you have formal HR policies including Safeguarding and Code of Conduct?",
-        "options": [
-          { "text": "Yes, all staff are trained and sign these policies annually.", "score": 3 },
-          { "text": "We have the documents, but they are rarely reviewed or enforced.", "score": 2 },
-          { "text": "We have basic guidelines but no formal policies.", "score": 1 },
-          { "text": "No HR or safeguarding policies in place.", "score": 0 }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "pra-1",
-    "title": "Proposal Readiness Assessment",
-    "category": "Fundraising",
-    "description": "Determine if your organisation is ready to apply for major institutional funding.",
-    "questions": [
-      {
-        "id": "p1",
-        "text": "Do you have at least 3 years of audited financial statements?",
-        "options": [
-          { "text": "Yes, unconditionally clean audits.", "score": 3 },
-          { "text": "Yes, but with some management letter findings.", "score": 2 },
-          { "text": "We have 1-2 years of audits.", "score": 1 },
-          { "text": "No external audits conducted yet.", "score": 0 }
-        ]
-      }
-    ]
-  }
-]
+{
+  "assessments": [
+    {
+      "id": "pra",
+      "title": "Project Readiness Assessment (PRA)",
+      "description": "Evaluate your organization's readiness to design, implement, and manage successful development projects.",
+      "icon": "📋",
+      "color": "#4f46e5",
+      "timeEstimate": "15-20 min",
+      "questions": [
+        {
+          "id": "pra1",
+          "question": "Does your organization have a clear and documented mission statement?",
+          "category": "Organizational Readiness",
+          "options": ["Yes, well-documented", "Partially documented", "No, not documented"]
+        },
+        {
+          "id": "pra2",
+          "question": "Does your organization have a registered legal status (NGO/CBO)?",
+          "category": "Organizational Readiness",
+          "options": ["Yes, fully registered", "In process", "No"]
+        },
+        {
+          "id": "pra3",
+          "question": "Does your organization have a board of directors or advisory board?",
+          "category": "Organizational Readiness",
+          "options": ["Yes, active board", "Yes, but inactive", "No board"]
+        },
+        {
+          "id": "pra4",
+          "question": "Does your organization have documented operational policies and procedures?",
+          "category": "Organizational Readiness",
+          "options": ["Fully documented", "Partially documented", "Not documented"]
+        },
+        {
+          "id": "pra5",
+          "question": "Does your organization have audited financial statements for the last 2 years?",
+          "category": "Financial Readiness",
+          "options": ["Yes, audited", "Yes, but not audited", "No financial statements"]
+        },
+        {
+          "id": "pra6",
+          "question": "Does your organization have a dedicated bank account for projects?",
+          "category": "Financial Readiness",
+          "options": ["Yes", "Yes, but not active", "No"]
+        },
+        {
+          "id": "pra7",
+          "question": "Does your organization have a financial management system in place?",
+          "category": "Financial Readiness",
+          "options": ["Yes, robust system", "Basic system", "No system"]
+        },
+        {
+          "id": "pra8",
+          "question": "Does your organization have qualified staff with relevant expertise?",
+          "category": "Technical Readiness",
+          "options": ["Yes, highly qualified", "Some qualified staff", "Limited expertise"]
+        },
+        {
+          "id": "pra9",
+          "question": "Does your organization have experience implementing similar projects?",
+          "category": "Technical Readiness",
+          "options": ["Extensive experience", "Some experience", "No experience"]
+        },
+        {
+          "id": "pra10",
+          "question": "Does your organization have a monitoring and evaluation system?",
+          "category": "Technical Readiness",
+          "options": ["Comprehensive M&E system", "Basic M&E", "No M&E system"]
+        },
+        {
+          "id": "pra11",
+          "question": "Does your organization have existing partnerships in the sector?",
+          "category": "Partnership Readiness",
+          "options": ["Strong partnerships", "Some partnerships", "No partnerships"]
+        },
+        {
+          "id": "pra12",
+          "question": "Does your organization have strong community relationships?",
+          "category": "Partnership Readiness",
+          "options": ["Strong relationships", "Some relationships", "No relationships"]
+        },
+        {
+          "id": "pra13",
+          "question": "Does your organization have a clear understanding of the target community's needs?",
+          "category": "Project Design",
+          "options": ["In-depth understanding", "Some understanding", "Limited understanding"]
+        },
+        {
+          "id": "pra14",
+          "question": "Does your organization have a theory of change or logic model?",
+          "category": "Project Design",
+          "options": ["Yes, well-developed", "Partially developed", "No"]
+        },
+        {
+          "id": "pra15",
+          "question": "Does your organization have a risk management strategy?",
+          "category": "Project Design",
+          "options": ["Comprehensive strategy", "Basic strategy", "No strategy"]
+        },
+        {
+          "id": "pra16",
+          "question": "Does your organization have a sustainability plan for projects?",
+          "category": "Project Design",
+          "options": ["Comprehensive plan", "Basic plan", "No plan"]
+        },
+        {
+          "id": "pra17",
+          "question": "Does your organization have a communications strategy?",
+          "category": "Organizational Capacity",
+          "options": ["Comprehensive strategy", "Basic strategy", "No strategy"]
+        },
+        {
+          "id": "pra18",
+          "question": "Does your organization have a staff development and training plan?",
+          "category": "Organizational Capacity",
+          "options": ["Comprehensive plan", "Basic plan", "No plan"]
+        },
+        {
+          "id": "pra19",
+          "question": "Does your organization have a fundraising strategy beyond this grant?",
+          "category": "Financial Sustainability",
+          "options": ["Comprehensive strategy", "Basic strategy", "No strategy"]
+        },
+        {
+          "id": "pra20",
+          "question": "Does your organization have a budget tracking mechanism?",
+          "category": "Financial Sustainability",
+          "options": ["Comprehensive mechanism", "Basic mechanism", "No mechanism"]
+        }
+      ]
+    },
+    {
+      "id": "fss",
+      "title": "Funding Source Suitability Assessment (FSSA)",
+      "description": "Evaluate which funding sources best match your organization's capacity, focus, and readiness.",
+      "icon": "🎯",
+      "color": "#10b981",
+      "timeEstimate": "15-20 min",
+      "questions": [
+        {
+          "id": "fss1",
+          "question": "What is your organization's annual operating budget?",
+          "category": "Organizational Size",
+          "options": ["Under $50,000", "$50,000-$250,000", "$250,000-$1,000,000", "Over $1,000,000"]
+        },
+        {
+          "id": "fss2",
+          "question": "How many full-time staff does your organization have?",
+          "category": "Organizational Size",
+          "options": ["1-3", "4-10", "11-25", "Over 25"]
+        },
+        {
+          "id": "fss3",
+          "question": "What geographic area does your organization serve?",
+          "category": "Geographic Scope",
+          "options": ["Local community", "Region/State", "National", "International"]
+        },
+        {
+          "id": "fss4",
+          "question": "What is your organization's primary focus area?",
+          "category": "Sector Focus",
+          "options": ["Healthcare", "Education", "Agriculture", "Social Justice", "Climate Action", "Economic Development", "Other"]
+        },
+        {
+          "id": "fss5",
+          "question": "What is the primary source of your current funding?",
+          "category": "Funding History",
+          "options": ["Government grants", "Private foundations", "Corporate donations", "Individual donations", "International donors"]
+        },
+        {
+          "id": "fss6",
+          "question": "Does your organization have experience with donor reporting?",
+          "category": "Funding History",
+          "options": ["Extensive experience", "Some experience", "No experience"]
+        },
+        {
+          "id": "fss7",
+          "question": "What type of funding is most suitable for your organization?",
+          "category": "Funding Type",
+          "options": ["Project grants", "Core/operational support", "Capacity building", "Research grants", "Emergency funding"]
+        },
+        {
+          "id": "fss8",
+          "question": "What is your organization's preferred grant size?",
+          "category": "Funding Preferences",
+          "options": ["Under $10,000", "$10,000-$50,000", "$50,000-$250,000", "$250,000-$1,000,000", "Over $1,000,000"]
+        },
+        {
+          "id": "fss9",
+          "question": "What is your organization's timeline for project implementation?",
+          "category": "Funding Preferences",
+          "options": ["3-6 months", "6-12 months", "12-24 months", "24+ months"]
+        },
+        {
+          "id": "fss10",
+          "question": "Does your organization have the capacity to manage large grants?",
+          "category": "Organizational Capacity",
+          "options": ["Yes, fully", "Some capacity", "Limited capacity", "No capacity"]
+        },
+        {
+          "id": "fss11",
+          "question": "Does your organization have a dedicated grants manager?",
+          "category": "Organizational Capacity",
+          "options": ["Yes, full-time", "Yes, part-time", "No, but shared", "No"]
+        },
+        {
+          "id": "fss12",
+          "question": "Does your organization have a strategic plan?",
+          "category": "Organizational Planning",
+          "options": ["Yes, current plan", "Yes, outdated plan", "Developing plan", "No plan"]
+        },
+        {
+          "id": "fss13",
+          "question": "Does your organization have a monitoring and evaluation framework?",
+          "category": "Organizational Planning",
+          "options": ["Comprehensive framework", "Basic framework", "No framework"]
+        },
+        {
+          "id": "fss14",
+          "question": "What is the size of your target beneficiary population?",
+          "category": "Target Population",
+          "options": ["Under 500", "500-2,000", "2,000-10,000", "Over 10,000"]
+        },
+        {
+          "id": "fss15",
+          "question": "Does your organization have a sustainability plan beyond donor funding?",
+          "category": "Sustainability",
+          "options": ["Comprehensive plan", "Basic plan", "No plan"]
+        },
+        {
+          "id": "fss16",
+          "question": "Does your organization have a communications and visibility strategy?",
+          "category": "Sustainability",
+          "options": ["Comprehensive strategy", "Basic strategy", "No strategy"]
+        },
+        {
+          "id": "fss17",
+          "question": "What is the primary language of your organization's operations?",
+          "category": "Operational Context",
+          "options": ["English", "French", "Local language", "Multiple languages"]
+        },
+        {
+          "id": "fss18",
+          "question": "Does your organization have partnerships with other organizations?",
+          "category": "Partnerships",
+          "options": ["Multiple partners", "Some partners", "No partners"]
+        },
+        {
+          "id": "fss19",
+          "question": "Does your organization have a gender equality policy?",
+          "category": "Organizational Policies",
+          "options": ["Yes, comprehensive", "Yes, basic", "No policy"]
+        },
+        {
+          "id": "fss20",
+          "question": "Does your organization have a safeguarding policy?",
+          "category": "Organizational Policies",
+          "options": ["Yes, comprehensive", "Yes, basic", "No policy"]
+        }
+      ]
+    }
+  ]
+}

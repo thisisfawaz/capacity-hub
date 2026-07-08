@@ -40,11 +40,29 @@
   color: var(--text-secondary);
   font-weight: 500;
   transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.navItem:hover, .navItemActive {
+.navItem:hover {
   background-color: var(--bg-subtle);
-  color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+/* Active state - Red button with white text */
+.navItemActive {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+.navItemActive:hover {
+  background-color: #b91c1c !important;  /* Darker red on hover */
+  color: white !important;
+}
+
+.navItemActive svg {
+  color: white !important;
 }
 
 .main {
@@ -105,4 +123,126 @@
   flex: 1;
   overflow-y: auto;
   padding: var(--spacing-8);
+}
+
+/* Add these to your existing Layout.module.css */
+
+/* Mobile Hamburger Menu Button */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  padding: 0.5rem;
+}
+
+/* Mobile Sidebar Overlay */
+.sidebarOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.sidebarOverlayOpen {
+  display: block;
+}
+
+/* Mobile Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: var(--bg-color);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    width: 280px;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebarOverlayOpen {
+    display: block;
+  }
+
+  .header {
+    padding: 0 1rem;
+    height: 60px;
+  }
+
+  .searchBar {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .searchInput {
+    width: 80px;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .nav {
+    padding: 0 0.75rem;
+  }
+
+  .navItem {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0 0.75rem;
+    height: 56px;
+  }
+
+  .searchBar {
+    max-width: 140px;
+  }
+
+  .searchInput {
+    width: 60px;
+    font-size: 0.8rem;
+  }
+
+  .profile span {
+    display: none;
+  }
+
+  .content {
+    padding: 0.75rem;
+  }
 }

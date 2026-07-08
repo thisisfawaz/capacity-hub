@@ -59,3 +59,75 @@ button {
 ul {
   list-style: none;
 }
+
+/* src/app/page.module.css */
+
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pageSubtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.statCard {
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.statCard:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+  40% { opacity: 1; transform: scale(1.2); }
+}
+
+.dot {
+  display: inline-block;
+  font-size: 2rem;
+  animation: dotPulse 1.5s ease-in-out infinite;
+  color: var(--primary-color);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  :root {
+    --font-size-h1: 1.8rem;
+    --font-size-h2: 1.4rem;
+    --font-size-h3: 1.1rem;
+    --font-size-body: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-h1: 1.5rem;
+    --font-size-h2: 1.2rem;
+    --font-size-h3: 1rem;
+    --font-size-body: 0.85rem;
+  }
+}

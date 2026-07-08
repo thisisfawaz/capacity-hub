@@ -19,7 +19,9 @@ export default function KnowledgeCentre() {
           <div key={article.id} className={styles.statCard} style={{ display: 'block', padding: '2rem' }}>
             <span style={{ color: 'var(--primary-color)', fontSize: '0.875rem', fontWeight: 600, display: 'block', marginBottom: '0.5rem' }}>{article.category}</span>
             <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--text-primary)' }}>
-              <Link href={`/knowledge/${article.id}`}>{article.title}</Link>
+              <Link href={`/knowledge/${article.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                {article.title}
+              </Link>
             </h2>
             <div style={{ display: 'flex', gap: '1rem', fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
               <span>{article.author}</span>
@@ -28,10 +30,11 @@ export default function KnowledgeCentre() {
               <span>•</span>
               <span>{article.readTime}</span>
             </div>
+            {/* ✅ Show excerpt instead of full content */}
             <p style={{ lineHeight: '1.6', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-              {article.content}
+              {article.excerpt || article.content.substring(0, 200) + '...'}
             </p>
-            <Link href={`/knowledge/${article.id}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary-color)', fontWeight: 500 }}>
+            <Link href={`/knowledge/${article.id}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', color: 'var(--primary-color)', fontWeight: 500, textDecoration: 'none' }}>
               <FiBookOpen /> Read Full Article
             </Link>
           </div>
