@@ -283,3 +283,16 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Pendulum swing animation */
+@keyframes swing {
+  0% { transform: rotate(-25deg); }
+  50% { transform: rotate(25deg); }
+  100% { transform: rotate(-25deg); }
+}
+
+.swing {
+  animation: swing 1.5s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: top center;
+}

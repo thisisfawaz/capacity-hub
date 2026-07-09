@@ -1645,11 +1645,6 @@ Created with CapacityHub Planning Centre
           <h1 className={styles.pageTitle}>Toolkits</h1>
           <p className={styles.pageSubtitle}>Practical tools to help your NGO plan strategically and effectively.</p>
         </div>
-        {activeTool && (
-          <Button variant="outline" onClick={() => { setActiveTool(null); setShowResult(false); }}>
-            <FiArrowLeft /> Back to Tools
-          </Button>
-        )}
       </div>
 
       {!activeTool ? (

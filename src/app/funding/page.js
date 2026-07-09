@@ -212,16 +212,19 @@ export default function FundingHub() {
   };
 
   // Check if mobile
-  const [isMobile, setIsMobile] = useState(false);
-  
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+    const [isMobile, setIsMobile] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
+
+    useEffect(() => {
+      const checkScreenSize = () => {
+        const width = window.innerWidth;
+        setIsMobile(width < 768);
+        setIsTablet(width >= 768 && width < 1024);
+      };
+      checkScreenSize();
+      window.addEventListener('resize', checkScreenSize);
+      return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
 
   return (
     <Layout>
@@ -396,10 +399,23 @@ export default function FundingHub() {
         }}>
           {isLoading ? (
             <div className={styles.statCard} style={{ display: 'block', padding: '2rem', textAlign: 'center', color: 'var(--text-secondary)' }}>
-              <div style={{ fontSize: '2rem', animation: 'spin 1.5s linear infinite' }}>
+              <div style={{ 
+                fontSize: '2rem', 
+                animation: 'swing 1.5s ease-in-out infinite', 
+                display: 'inline-block', 
+                transformOrigin: 'right center' 
+              }}>
                 <FiSearch />
               </div>
-              <div style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}>Searching grants...</div>
+              <div style={{ fontSize: '0.9rem', marginTop: '0.1rem' }}>Searching for grants...</div>
+              {/* Inline keyframe definition */}
+              <style>{`
+                @keyframes swing {
+                  0% { transform: rotate(-25deg); }
+                  50% { transform: rotate(25deg); }
+                  100% { transform: rotate(-25deg); }
+                }
+              `}</style>
             </div>
           ) : filteredFunding.length > 0 ? (
             filteredFunding.map(fund => (
@@ -467,7 +483,7 @@ export default function FundingHub() {
           flexDirection: 'column', 
           overflow: 'hidden'
         }}>
-          <div style={{ padding: '0.75rem 1rem', borderBottom: '1px solid var(--border-color)', backgroundColor: 'var(--bg-subtle)' }}>
+          <div style={{ padding: '0.75rem 1rem', borderBottom: '0px solid var(--border-color)', backgroundColor: 'white' }}>
             <h3 style={{ fontSize: isMobile ? '0.9rem' : '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>🤖 Grant Assistant</h3>
             <span style={{ fontSize: isMobile ? '0.6rem' : '0.7rem', color: 'var(--text-secondary)' }}>Ask about grants, eligibility, or proposal tips</span>
           </div>
@@ -498,39 +514,49 @@ export default function FundingHub() {
             <div ref={chatEndRef} />
           </div>
 
-          <form onSubmit={handleSendMessage} style={{ padding: '0.75rem', borderTop: '1px solid var(--border-color)', display: 'flex', gap: '0.5rem' }}>
-            <input 
-              type="text" 
-              placeholder="Ask about grants..." 
-              value={inputVal}
-              onChange={(e) => setInputVal(e.target.value)}
-              style={{ 
-                flex: 1, 
-                padding: isMobile ? '0.4rem 0.6rem' : '0.5rem 0.75rem', 
-                borderRadius: '6px', 
-                border: '1px solid var(--border-color)', 
-                fontSize: isMobile ? '0.8rem' : '0.85rem', 
-                outline: 'none',
-                backgroundColor: 'var(--bg-color)'
-              }}
-              disabled={isAsking}
-            />
+          <form onSubmit={handleSendMessage} style={{ padding: '0.75rem', borderTop: '1px solid var(--border-color)', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <input 
+                type="text" 
+                placeholder="Ask about grants..." 
+                value={inputVal}
+                onChange={(e) => setInputVal(e.target.value)}
+                style={{ 
+                  flex: 1, 
+                  padding: isMobile ? '0.5rem 0.75rem' : isTablet ? '0.6rem 1rem' : '0.8rem 1.2rem',
+                  borderRadius: '8px', 
+                  border: '1px solid var(--border-color)', 
+                  fontSize: isMobile ? '0.85rem' : isTablet ? '0.9rem' : '1rem',
+                  outline: 'none',
+                  backgroundColor: 'var(--bg-color)',
+                  minHeight: isMobile ? '40px' : isTablet ? '44px' : '52px',
+                  minWidth: isMobile ? '260px' : isTablet ? '340px' : '540px',
+                  maxWidth: '100%',
+                  boxSizing: 'border-box',
+                  width: '100%'
+                }}
+                disabled={isAsking}
+              />
+            </div>
             <button 
               type="submit" 
               style={{ 
-                padding: isMobile ? '0.4rem 0.6rem' : '0.5rem 0.75rem', 
-                borderRadius: '6px', 
+                padding: isMobile ? '0.4rem 0.6rem' : isTablet ? '0.5rem 0.8rem' : '0.7rem 1rem',
+                borderRadius: '8px', 
                 border: 'none', 
                 backgroundColor: 'var(--primary-color)', 
                 color: 'white', 
                 display: 'flex', 
                 alignItems: 'center', 
                 justifyContent: 'center', 
-                cursor: 'pointer' 
+                cursor: 'pointer',
+                flexShrink: 0,
+                minWidth: isMobile ? '40px' : isTablet ? '44px' : '52px',
+                minHeight: isMobile ? '40px' : isTablet ? '44px' : '52px'
               }}
               disabled={isAsking}
             >
-              <FiSend size={isMobile ? 16 : 18} />
+              <FiSend size={isMobile ? 16 : isTablet ? 17 : 20} />
             </button>
           </form>
         </div>
