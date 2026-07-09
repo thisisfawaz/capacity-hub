@@ -149,7 +149,7 @@ export default function Home() {
               </h1>
               <p style={{ fontSize: isMobile ? '0.85rem' : '1.1rem', opacity: 0.9, maxWidth: '550px' }}>
                 Your gateway to knowledge on grant writing, proposal development, 
-                and sustainable project management.
+                and sustainable program management.
               </p>
             </div>
             <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center', flexWrap: 'wrap' }}>
