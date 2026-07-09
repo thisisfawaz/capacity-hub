@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -11,6 +11,7 @@ import styles from "./Layout.module.css";
 export default function Layout({ children }) {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const sidebarRef = useRef(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -19,6 +20,27 @@ export default function Layout({ children }) {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
+
+  // Close sidebar when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
 
   const navItems = [
     { name: "Dashboard", path: "/", icon: <FiHome /> },
@@ -38,7 +60,10 @@ export default function Layout({ children }) {
       )}
 
       {/* Sidebar */}
-      <aside className={`${styles.sidebar} ${isMobileMenuOpen ? styles.sidebarOpen : ''}`}>
+      <aside 
+        ref={sidebarRef}
+        className={`${styles.sidebar} ${isMobileMenuOpen ? styles.sidebarOpen : ''}`}
+      >
         <div className={styles.logo}>
           <Image src="/4ther-logo.png" alt="4ther Hub Logo" width={100} height={40} />
           <span></span>
